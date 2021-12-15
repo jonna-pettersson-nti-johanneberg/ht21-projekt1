@@ -63,8 +63,8 @@ nav {
   height: 80vh;
   width: 100vw;
   display: grid;
-  grid-template-areas: "lf lf ht mn mn mn rt rt";
-  grid-template-columns: repeat(8, 12.5%);
+  grid-template-areas: "lf lf ht ht mn mn mn hs hs rt rt";
+  grid-template-columns: repeat(10, 10%);
 }
 
 /* 2.3.1 Left Side */
@@ -92,6 +92,11 @@ nav {
 .hotdog {
   background: blue;
   grid-area: ht;
+}
+
+.hotdogg {
+  background: pink;
+  grid-area: hs;
 }
 
 /* 2.3.3 Main Part */
