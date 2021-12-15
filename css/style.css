@@ -60,11 +60,11 @@ nav {
 /* 2.3 Mainpage */
 .main-page {
   margin-top: calc(5em);
-  height: 80vh;
+  height: calc(100vh - 5em);
   width: 100vw;
   display: grid;
-  grid-template-areas: "lf lf ht ht mn mn mn hs hs rt rt";
-  grid-template-columns: repeat(10, 10%);
+  grid-template-areas: "lf lf hl mn mn mn hr rt rt";
+  grid-template-columns: repeat(9, calc(100% / 9));
 }
 
 /* 2.3.1 Left Side */
@@ -89,14 +89,14 @@ nav {
 }
 
 /* 2.3.2 HotDog */
-.hotdog {
+.hotdog-left {
   background: blue;
-  grid-area: ht;
+  grid-area: hl;
 }
 
-.hotdogg {
+.hotdog-right {
   background: pink;
-  grid-area: hs;
+  grid-area: hr;
 }
 
 /* 2.3.3 Main Part */
@@ -140,6 +140,19 @@ main {
   grid-area: rt;
 }
 
-.right > ul > * {
+.info,
+.drink-menu {
+  position: relative;
+  outline: 2px solid black;
+  margin-left: 10%;
+  margin-top: 10%;
+  width: 70%;
+  height: 42.5%;
+  padding: 1% 0 0 10%;
+}
+
+.info > ul > *,
+.drink-menu > ul > * {
   list-style-position: inside;
+  margin-top: 2em;
 }
