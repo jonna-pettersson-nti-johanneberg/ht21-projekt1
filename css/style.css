@@ -7,6 +7,7 @@
     2.Layout
         2.1 Container
         2.2 Navigation
+          2.2.1 Logga
         2.3 Mainpage
           2.3.1 Left Side
           2.3.2 HotDog
@@ -52,9 +53,20 @@ nav {
   top: 0;
   left: 0;
   position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 42vw);
   width: 100vw;
   height: 5em;
   background: lawngreen;
+}
+
+/* 2.2.1 Logga */
+#logga {
+  height: 7em;
+  width: 15em;
+  position: relative;
+  margin-left: 100%;
+  margin-top: -2%;
 }
 
 /* 2.3 Mainpage */
@@ -105,7 +117,7 @@ main {
   grid-area: mn;
   display: grid;
   grid-auto-flow: row;
-  place-content: center;
+  place-items: center;
 }
 
 .special {
@@ -114,7 +126,6 @@ main {
   place-items: center;
   border: 2px solid black;
   width: fit-content;
-  margin-left: 10%;
 }
 
 .special > img {
