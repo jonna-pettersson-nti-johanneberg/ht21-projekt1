@@ -14,9 +14,7 @@
           2.3.3 Main Part
           2.3.4 Right Side
 
-    3. KeyFrames
-
-    4. Components
+    3. Components
 
 */
 
@@ -29,6 +27,7 @@ body {
   color: black;
   font-size: 100%;
   overflow-x: hidden;
+  height: min-content;
 }
 
 /* 1.2 Global Variables */
@@ -53,21 +52,28 @@ nav {
   top: 0;
   left: 0;
   position: absolute;
-  display: grid;
-  grid-template-columns: repeat(2, 42vw);
+  display: flex;
+  flex-flow: row;
+  place-content: center;
   width: 100vw;
   height: 5em;
   border-bottom: 2px solid rgb(73, 73, 73);
   background: rgb(160, 160, 160);
 }
 
+nav > .nav-link {
+  text-align: center;
+}
+
 /* 2.2.1 Logga */
-#logga {
+nav > #logga {
+  margin-left: 12.5%;
+}
+
+nav > #logga > img {
   height: 7em;
   width: 15em;
-  position: relative;
-  margin-left: 100%;
-  margin-top: -2%;
+  margin-top: -5%;
 }
 
 /* 2.3 Mainpage */
@@ -122,10 +128,11 @@ main {
 }
 
 .special {
+  margin-top: 2em;
   display: grid;
   grid-auto-flow: row;
   place-items: center;
-  border: 2px solid black;
+  outline: 2px solid black;
   width: fit-content;
 }
 
@@ -134,11 +141,12 @@ main {
 }
 
 .slide-show {
+  margin-top: 0em;
   display: grid;
   grid-auto-flow: column;
   overflow: scroll;
-  width: 30em;
-  height: 30em;
+  width: 25em;
+  height: 20em;
 }
 
 .slide-show > img {
@@ -167,4 +175,22 @@ main {
 .drink-menu > ul > * {
   list-style-position: inside;
   margin-top: 2em;
+}
+
+/*===========
+  Components
+============*/
+
+.small-button {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #00dbdb;
+  box-shadow: 5px 5px 20px 2px #00dbdb65;
+  transition: background-color 250ms ease-in-out;
+  color: white;
+}
+
+.small-button:hover {
+  background-color: #00dbdb;
 }
